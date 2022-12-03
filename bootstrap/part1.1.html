@@ -7,7 +7,15 @@
         <meta name="author" content="" />
         <title>WebDev CA2</title>
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+        <script>
+            function reply_click(clicked_object){
+                let sql = clicked_object.getAttribute('data-sql');
+                editor.setValue(sql);
+            }
+        </script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -30,7 +38,7 @@
                     <p class="lead">This is Part 1.1</p>
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                    <button name="1.1.1" class="btn btn-success btn-block">1.1.1</button>
+                    <button name="1.1.1" class="btn btn-success btn-block" data-sql="SELECT * FROM employees LIMIT 100" onclick="reply_click(this)">1.1.1</button>
                     <button name="1.1.2" class="btn btn-success btn-block">1.1.2</button>
                     <button name="1.1.3" class="btn btn-success btn-block">1.1.3</button>
                     <button name="1.1.4" class="btn btn-success btn-block">1.1.4</button>
@@ -52,5 +60,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/gui.js"></script>
     </body>
 </html>
