@@ -61,7 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: rgb(255, 255, 255);
+  --bs-body-bg: #fff;
 }
 
 *,
@@ -11285,36 +11285,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-
-.CodeMirror {
-  border: 1px solid #222;
-  height: auto;
-}
-.CodeMirror-scroll {
-  overflow-y: hidden;
-  overflow-x: auto;
-}
-
-.error {
-	color:red;
-	transition:.5s;
-	overflow:hidden;
-	margin: 15px;
-}
-
-#output {
-	overflow: auto;
-}
-
-table {
-	width:auto;
-	margin:auto;
-	border:1px solid black;
- 	border-collapse:collapse;
- 	margin-bottom:10px;
-}
-
-th, td {
-	border:1px solid #777;
 }
