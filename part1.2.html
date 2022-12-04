@@ -39,17 +39,17 @@
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                     <button name="1.2.1" class="btn btn-success btn-block" data-sql="SELECT COUNT (hire_date) FROM employees WHERE hire_date LIKE '1991-05-01' LIMIT 1000" onclick="reply_click(this)">1.2.1</button>
-                    <button name="1.2.2" class="btn btn-success btn-block" data-sql="SELECT emp_id, count (title) FROM titles GROUP by emp_id HAVING COUNT (title)>2 LIMIT 1000" onclick="reply_click(this)">1.2.2</button>
+                    <button name="1.2.2" class="btn btn-success btn-block" data-sql="SELECT emp_id, COUNT (title) FROM titles GROUP by emp_id HAVING COUNT (title)>2 LIMIT 1000" onclick="reply_click(this)">1.2.2</button>
                     <button name="1.2.3" class="btn btn-success btn-block" data-sql="SELECT * FROM employees WHERE gender = 'F' LIMIT 1000" onclick="reply_click(this)">1.2.3</button>
                     <button name="1.2.4" class="btn btn-success btn-block" data-sql="SELECT last_name, hire_date FROM employees WHERE hire_date <= '1986-01-01' 
                     AND last_name LIKE 'Simmel' LIMIT 1000" onclick="reply_click(this)">1.2.4</button>
                     <button name="1.2.5" class="btn btn-success btn-block" data-sql="SELECT COUNT (last_name) AS 'Total with B' FROM employees 
                     WHERE last_name LIKE 'B%' LIMIT 1000" onclick="reply_click(this)">1.2.5</button>
                     <button name="1.2.6" class="btn btn-success btn-block" data-sql="CREATE TABLE emp_training (id_trainer INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
-                    first_name VARCHAR (30) not NULL, last_name VARCHAR(30) not NULL, 
+                    first_name VARCHAR (30) NOT NULL, last_name VARCHAR(30) NOT NULL, 
                     t_module VARCHAR(20)); PRAGMA table_info ('emp_training')" onclick="reply_click(this)">1.2.6</button>
-                    <button name="1.2.7" class="btn btn-success btn-block" data-sql="INSERT into emp_training ( first_name , last_name, t_module) VALUES ('Joe', 'Bloggs', 'Google Docs'); 
-                    INSERT into emp_training ( first_name , last_name, t_module) 
+                    <button name="1.2.7" class="btn btn-success btn-block" data-sql="INSERT INTO emp_training ( first_name , last_name, t_module) VALUES ('Joe', 'Bloggs', 'Google Docs'); 
+                    INSERT INTO emp_training ( first_name , last_name, t_module) 
                     VALUES ('Fred', 'Bloggs', 'Google Sheets'); SELECT * FROM emp_training" onclick="reply_click(this)">1.2.7</button>
                     <button name="1.2.8" class="btn btn-success btn-block" data-sql="DROP TABLE emp_training; SELECT * FROM emp_training" onclick="reply_click(this)">1.2.8</button>
                     <button name="1.2.9" class="btn btn-success btn-block" data-sql="ALTER TABLE employees ADD email_address VARCHAR(20); PRAGMA table_info ('employees')" onclick="reply_click(this)">1.2.9</button>
